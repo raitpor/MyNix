@@ -7,7 +7,7 @@
 	      	ls="eza -al --color=always --group-directories-first --icons"; # preferred listing
 			la="eza -a --color=always --group-directories-first --icons";  # all files and dirs
 			ll="eza -l --color=always --group-directories-first --icons";  # long format
-			lt="eza -aT --color=always --group-directories-first --icons"; # tree listing
+			lt="eza -aT -L 2 --color=always --group-directories-first --icons"; # tree listing
 	      	rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#thinkbook ";
 	      	gc = "sudo nix-collect-garbage -d";
 			jctl = "journalctl -p 3 -xb";
