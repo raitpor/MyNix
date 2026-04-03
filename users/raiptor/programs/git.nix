@@ -9,6 +9,7 @@
       init.defaultBranch = "main";
       core.editor = "nvim";
       safe.directory = "/etc/nixos";
+      credential.helper = "store";
     };
   };
 }

@@ -21,9 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell";
     };
+
+    nix-sweep.url = "github:jzbor/nix-sweep";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, nix-sweep,... }@inputs: {
     nixosConfigurations.thinkbook = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; }; # 将 inputs 传递给子模块
@@ -50,6 +52,18 @@
           # 可选：全局 Home Manager 配置
           home-manager.extraSpecialArgs = { inherit inputs; };
         }
+
+	nix-sweep.nixosModules.default{
+          services.nix-sweep = {
+             enable = true;
+	     interval = "daily";
+	     removeOlder = "7d";
+	     keepMin = 5;
+	     gc = true;
+
+	     gcInterval = "weekly";
+	  };
+	}
       ];
     };
   };
