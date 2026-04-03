@@ -1,4 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -10,9 +16,12 @@
   # --- 基础系统设置 ---
   networking.hostName = "thinkbook";
   networking.networkmanager.enable = true;
-  system.stateVersion = "25.11"; 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+  system.stateVersion = "25.11";
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # 国内镜像加速 (清华源)
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   #nix.settings.trusted-public-keys = [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
@@ -23,11 +32,11 @@
     enable = true;
   };
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   # --- 内核与硬件驱动 (Intel Ultra 125H) ---
   # Intel Ultra 需要较新的内核 (6.8+) 以完美支持 Arc 核显和能效
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+
   # 启用 Intel 微码
   hardware.cpu.intel.updateMicrocode = true;
 
@@ -47,7 +56,7 @@
   };
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
-  
+
   programs.niri = {
     enable = true;
     package = pkgs.niri; # 确保 nixpkgs 版本够新
@@ -80,7 +89,10 @@
   # 将用户加入 docker 组 (在 users 模块或这里处理，推荐在 users 模块)
   users.users.raiptor = {
     isNormalUser = true;
-    extraGroups = [ "docker" "wheel" ];
+    extraGroups = [
+      "docker"
+      "wheel"
+    ];
     shell = pkgs.fish;
   };
 
@@ -94,7 +106,7 @@
 
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    fastfetch
+    nixfmt
     kdePackages.dolphin
     adwaita-icon-theme
   ];

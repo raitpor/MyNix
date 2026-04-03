@@ -1,4 +1,4 @@
-{config,pkgs,...}:
+{ config, pkgs, ... }:
 {
   # --- 终端: Kitty (GPU 加速) ---
   programs.kitty = {

@@ -38,6 +38,7 @@
     bat
     eza # ls 的现代替代品
     yazi
+    fastfetch
     
     # 语言运行时 (具体版本可由 mise 管理，这里安装通用编译器)
     rustup
