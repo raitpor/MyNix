@@ -43,6 +43,7 @@
     # 语言运行时 (具体版本可由 mise 管理，这里安装通用编译器)
     rustup
     python3
+    conda
     nodejs_20
     jdk17
     

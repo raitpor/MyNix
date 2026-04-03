@@ -8,7 +8,7 @@
       la = "eza -a --color=always --group-directories-first --icons"; # all files and dirs
       ll = "eza -l --color=always --group-directories-first --icons"; # long format
       lt = "eza -aT -L 2 --color=always --group-directories-first --icons"; # tree listing
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#thinkbook --option substituters \"https://mirrors.ustc.edu.cn/nix-channels/store\"";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#thinkbook --option substituters \"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store\"";
       gc = "sudo nix-collect-garbage -d";
       jctl = "journalctl -p 3 -xb";
     };
