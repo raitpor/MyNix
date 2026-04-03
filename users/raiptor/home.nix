@@ -13,7 +13,10 @@
     ./programs/vscode.nix
     ./programs/neovim.nix
     ./programs/git.nix
+    ./configs
   ];
+
+  xdg.configFile."niri/config.kdl".source = ./configs/niri/config.kdl;
 
   programs.btop.enable = true;
 
