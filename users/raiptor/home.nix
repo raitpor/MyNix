@@ -1,4 +1,8 @@
 { config, pkgs, inputs, ... }:
+
+let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+in
 {
   home.username = "raiptor";
   home.homeDirectory = "/home/raiptor";
@@ -54,7 +58,8 @@
     kubectl
     
     # AI 客户端
-    ollama-vulkan # 命令行客户端
+    # ollama-vulkan # 命令行客户端
+    unstable.ollama-vulkan
     lmstudio
     
     # 浏览器 (Niri 需要)

@@ -5,6 +5,9 @@
     # NixPKGS: 使用 25.11 或 unstable 以获取最新软件 (Intel Ultra 需要较新内核)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     
+    # Unstable source
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    
     # Home Manager: 管理用户层配置
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
