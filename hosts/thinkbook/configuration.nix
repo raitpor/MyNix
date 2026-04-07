@@ -96,11 +96,6 @@
     shell = pkgs.fish;
   };
 
-  # --- AI 工具: Ollama ---
-  services.ollama = {
-    enable = true;
-  };
-
   #dolphin挂载u盘服务
   services.udisks2.enable = true;
 

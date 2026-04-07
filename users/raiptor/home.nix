@@ -30,6 +30,12 @@ in
     nix-direnv.enable = true;
   };
 
+  # --- AI 工具: Ollama ---
+  services.ollama = {
+    enable = true;
+    package = unstable.ollama-vulkan;
+  };
+
   # --- 常用开发工具包 ---
   home.packages = with pkgs; [
     # 基础工具
@@ -56,11 +62,6 @@ in
     # 容器与云
     docker-compose
     kubectl
-    
-    # AI 客户端
-    # ollama-vulkan # 命令行客户端
-    unstable.ollama-vulkan
-    lmstudio
     
     # 浏览器 (Niri 需要)
     firefox
