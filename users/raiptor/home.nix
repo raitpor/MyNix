@@ -54,7 +54,7 @@
     kubectl
     
     # AI 客户端
-    ollama # 命令行客户端
+    ollama-vulkan # 命令行客户端
     # openclaw (假设是某个特定工具，若不存在可用 curl/httpie 替代)
     
     # 浏览器 (Niri 需要)
