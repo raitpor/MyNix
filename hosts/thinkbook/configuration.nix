@@ -104,6 +104,7 @@
     nixfmt
     kdePackages.dolphin
     adwaita-icon-theme
+    xwayland-satellite
   ];
 
   # --- 其他服务 ---

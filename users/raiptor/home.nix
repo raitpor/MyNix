@@ -65,5 +65,7 @@ in
     
     # 浏览器 (Niri 需要)
     firefox
+
+    clash-nyanpasu
   ];
 }
