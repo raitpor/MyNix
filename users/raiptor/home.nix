@@ -59,6 +59,7 @@ in
     nodejs_20
     jdk8
     maven
+    gradle
     
     # 容器与云
     docker-compose
