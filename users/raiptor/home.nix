@@ -57,7 +57,7 @@ in
     python3
     conda
     nodejs_20
-    jdk17
+    jdk8
     maven
     
     # 容器与云
