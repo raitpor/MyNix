@@ -58,6 +58,7 @@ in
     conda
     nodejs_20
     jdk17
+    maven
     
     # 容器与云
     docker-compose
