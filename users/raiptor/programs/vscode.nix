@@ -10,6 +10,7 @@
         vscjava.vscode-java-debug
         vscjava.vscode-java-test
         vscjava.vscode-gradle
+        vscjava.vscode-java-dependency
         usernamehw.errorlens
         ms-ceintl.vscode-language-pack-zh-hans
         jdinhlife.gruvbox

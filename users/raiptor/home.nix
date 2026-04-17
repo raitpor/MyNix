@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
@@ -6,8 +11,8 @@ in
 {
   home.username = "raiptor";
   home.homeDirectory = "/home/raiptor";
-  home.stateVersion = "25.11"; 
-  
+  home.stateVersion = "25.11";
+
   # 导入官方提供的 Git 和 Fish 模块
   programs.home-manager.enable = true;
 
@@ -51,7 +56,7 @@ in
     eza # ls 的现代替代品
     yazi
     fastfetch
-    
+
     # 语言运行时 (具体版本可由 mise 管理，这里安装通用编译器)
     rustup
     python3
@@ -60,11 +65,11 @@ in
     jdk8
     maven
     gradle
-    
+
     # 容器与云
     docker-compose
     kubectl
-    
+
     # 浏览器 (Niri 需要)
     firefox
 
