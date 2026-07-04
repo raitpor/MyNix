@@ -11,17 +11,19 @@ in
 {
   home.username = "raiptor";
   home.homeDirectory = "/home/raiptor";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   # 导入官方提供的 Git 和 Fish 模块
   programs.home-manager.enable = true;
 
   imports = [
+    inputs.noctalia.homeModules.default
     ./programs/fish.nix
     ./programs/kitty.nix
     ./programs/vscode.nix
     ./programs/neovim.nix
     ./programs/git.nix
+    ./programs/noctalia.nix
   ];
 
   xdg.configFile."niri/config.kdl".source = ./configs/niri/config.kdl;
@@ -33,12 +35,6 @@ in
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  # --- AI 工具: Ollama ---
-  services.ollama = {
-    enable = true;
-    package = unstable.ollama-vulkan;
   };
 
   # --- 常用开发工具包 ---
@@ -61,18 +57,14 @@ in
     rustup
     python3
     conda
-    nodejs_20
     jdk8
     maven
     gradle
 
     # 容器与云
     docker-compose
-    kubectl
 
     # 浏览器 (Niri 需要)
     firefox
-
-    clash-nyanpasu
   ];
 }

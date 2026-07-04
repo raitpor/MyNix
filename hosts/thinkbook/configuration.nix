@@ -16,7 +16,7 @@
   # --- 基础系统设置 ---
   networking.hostName = "thinkbook";
   networking.networkmanager.enable = true;
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -94,6 +94,13 @@
       "wheel"
     ];
     shell = pkgs.fish;
+  };
+
+  programs.clash-verge = {
+    enable = true;
+    package = pkgs.clash-verge-rev;
+    serviceMode = true;
+    tunMode = true;
   };
 
   #dolphin挂载u盘服务

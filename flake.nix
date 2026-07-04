@@ -3,14 +3,14 @@
 
   inputs = {
     # NixPKGS: 使用 25.11 或 unstable 以获取最新软件 (Intel Ultra 需要较新内核)
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     # Unstable source
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home Manager: 管理用户层配置
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -20,9 +20,8 @@
     # Limine Bootloader Support (如果需要额外模块，通常 nixpkgs 已包含，此处作为示例保留)
     # 注意：Limine 通常在 configuration.nix 中通过 boot.loader 直接配置
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
     };
 
     nix-sweep.url = "github:jzbor/nix-sweep";
