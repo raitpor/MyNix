@@ -96,6 +96,7 @@
     shell = pkgs.fish;
   };
 
+  #魔法
   programs.clash-verge = {
     enable = true;
     package = pkgs.clash-verge-rev;
@@ -103,6 +104,17 @@
     tunMode = true;
   };
 
+  #虚拟机
+  virtualisation.virtualbox = {
+    host.enable = true;
+    host.enableExtensionPack = true;
+    guest.enable = true;
+    guest.dragAndDrop = true;
+  };
+  
+  users.extraGroups.vboxusers.members = [ "raiptor" ];
+
+  
   #dolphin挂载u盘服务
   services.udisks2.enable = true;
 
@@ -110,9 +122,12 @@
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     nixfmt
     kdePackages.dolphin
+    kdePackages.ark
     adwaita-icon-theme
     xwayland-satellite
   ];
+
+  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   # --- 其他服务 ---
   programs.fish.enable = true; # 系统级启用 Fish
