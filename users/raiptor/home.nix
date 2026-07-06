@@ -24,7 +24,6 @@ in
     ./programs/neovim.nix
     ./programs/git.nix
     ./programs/noctalia.nix
-    ./programs/steam.nix
   ];
 
   xdg.configFile."niri/config.kdl".source = ./configs/niri/config.kdl;
