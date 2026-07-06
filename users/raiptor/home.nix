@@ -71,5 +71,7 @@ in
     unstable.cc-switch
 
     qq
+
+    calibre
   ];
 }
