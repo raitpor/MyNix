@@ -18,6 +18,7 @@
         brettm12345.nixfmt-vscode
         ms-python.python
         ms-python.vscode-pylance
+        vscodevim.vim
       ];
     };
   };

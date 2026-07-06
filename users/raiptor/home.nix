@@ -66,5 +66,10 @@ in
 
     # 浏览器 (Niri 需要)
     firefox
+
+    codex
+    unstable.cc-switch
+
+    qq
   ];
 }

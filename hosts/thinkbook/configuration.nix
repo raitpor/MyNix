@@ -54,6 +54,7 @@
     enable = true;
     wayland.enable = true; # SDDM 支持 Wayland 会话
   };
+  services.xserver.desktopManager.xterm.enable = false;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
