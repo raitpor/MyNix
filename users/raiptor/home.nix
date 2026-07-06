@@ -57,7 +57,7 @@ in
     rustup
     python3
     conda
-    jdk8
+    jdk25
     maven
     gradle
 
@@ -71,6 +71,9 @@ in
     unstable.cc-switch
 
     qq
+    qqmusic
+    netease-cloud-music-gtk
+    hmcl
 
     calibre
   ];
