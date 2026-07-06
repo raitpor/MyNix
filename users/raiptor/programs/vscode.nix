@@ -19,6 +19,10 @@
         ms-python.python
         ms-python.vscode-pylance
         vscodevim.vim
+        jebbs.plantuml
+        rust-lang.rust-analyzer
+        fill-labs.dependi
+        tamasfe.even-better-toml
       ];
     };
   };
