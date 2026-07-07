@@ -40,6 +40,8 @@
   # 启用 Intel 微码
   hardware.cpu.intel.updateMicrocode = true;
 
+  hardware.bluetooth.enable = true;
+
   # 图形加速 (Intel Arc / Xe)
   hardware.graphics = {
     enable = true;
@@ -129,6 +131,8 @@
   };
   
   users.extraGroups.vboxusers.members = [ "raiptor" ];
+
+  services.flatpak.enable = true;
 
   
   #dolphin挂载u盘服务

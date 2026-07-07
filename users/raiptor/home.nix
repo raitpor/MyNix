@@ -72,8 +72,11 @@ in
 
     qq
     qqmusic
+    wemeet
     netease-cloud-music-gtk
     hmcl
+
+    bottles
 
     calibre
   ];
