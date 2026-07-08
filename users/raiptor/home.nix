@@ -7,11 +7,15 @@
 
 let
   unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  novapkgs = inputs.nixpkgs-nova.packages.${pkgs.system};
 in
 {
   home.username = "raiptor";
   home.homeDirectory = "/home/raiptor";
   home.stateVersion = "26.05";
+
+  # 允许unfree
+  nixpkgs.config.allowUnfree = true;
 
   # 导入官方提供的 Git 和 Fish 模块
   programs.home-manager.enable = true;
@@ -79,5 +83,7 @@ in
     bottles
 
     calibre
+
+    novapkgs.reasonix-desktop
   ];
 }

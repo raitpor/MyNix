@@ -124,6 +124,24 @@
         "type": "github"
       }
     },
+    "nixpkgs-nova": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1783476033,
+        "narHash": "sha256-eKVSv3yKIWtmwZnQ7sgMXoscpGwXAQQGm9fjeIxQDDM=",
+        "owner": "raitpor",
+        "repo": "NovaNUR",
+        "rev": "4da915adf9bb38e989bfc6aa0895de3e29977dbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raitpor",
+        "repo": "NovaNUR",
+        "type": "github"
+      }
+    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1783224372,
@@ -185,6 +203,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1783224372,
+        "narHash": "sha256-8i/87eeoqiGE4yOTjwSA3Eh/ziJRQEmd/unYU+K27sk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d407951447dcd00442e97087bf374aad70c04cea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "noctalia": {
       "inputs": {
         "nixpkgs": [
@@ -212,6 +246,7 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
+        "nixpkgs-nova": "nixpkgs-nova",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "noctalia": "noctalia"
       }
