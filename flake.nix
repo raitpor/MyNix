@@ -8,8 +8,6 @@
     # Unstable source
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs-nova.url = "github:raitpor/NovaNUR";
-
     # Home Manager: 管理用户层配置
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
