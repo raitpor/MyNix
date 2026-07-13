@@ -60,6 +60,7 @@ in
     jdk25
     maven
     gradle
+    nodejs
 
     # 容器与云
     docker-compose
@@ -79,5 +80,6 @@ in
     bottles
 
     calibre
+    obsidian
   ];
 }
